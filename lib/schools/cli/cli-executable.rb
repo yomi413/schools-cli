@@ -1,4 +1,4 @@
-class Schools::CLI::CLI
+class Schools::CLI::CLIExecutable
 
 	def list
 		puts "---------- List of Public Middle Schools in Bronx, NY ----------"
