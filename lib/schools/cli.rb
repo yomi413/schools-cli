@@ -15,8 +15,6 @@ class Schools::CLI
 		puts ""
 		puts "What school would you like more information about, by number?"
 		puts ""
-
-
 	end
 
 end
