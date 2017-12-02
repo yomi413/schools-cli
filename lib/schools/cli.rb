@@ -1,14 +1,12 @@
-require "open-uri"
-require "pry"
-require "nokogiri"
+class Schools::CLI
 
-require_relative "./schools/cli/version"
-require_relative "./schools/cli/middle-schools"
-require_relative "./schools/cli/scraper"
-require_relative "./schools/cli/cli-executable"
+	def call
+		list
+	end
 
-module Schools
-  module Cli
-    # Your code goes here...
-  end
+	def list
+		puts "---------- List of Public Middle Schools in Bronx, NY ----------"
+		puts "1. Mott Hall Community School"
+		puts "2. Urban Institute of Mathematics"
+	end
 end

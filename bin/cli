@@ -1,5 +1,0 @@
-#!/usr/bin/env ruby
-
-require_relative "../lib/schools/cli"
-
-Schools::CLI::CLIExecutable.new.call

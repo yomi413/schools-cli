@@ -1,0 +1,2 @@
+class Schools::MiddleSchools
+end

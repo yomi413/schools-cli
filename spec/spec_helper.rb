@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "schools/cli"
+require "schools"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
