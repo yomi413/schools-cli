@@ -1,7 +1,7 @@
 class Schools::CLI
 
 	def call
-		list
+		start
 	end
 
 	def list
@@ -11,13 +11,15 @@ class Schools::CLI
 		puts ""
 		Schools::Scraper.new.schools_list
 		puts ""
-		puts ""
-		puts "What school would you like more information about, by number?"
-		puts ""
 	end
 
-	# def start
-	# 	list
-	# end
+	def start
+		list
+
+		puts ""
+		puts "What school would you like more information about, by number?"
+		input = gets.strip
+		puts ""
+	end
 
 end
