@@ -5,17 +5,17 @@ class Schools::MiddleSchools
 
 	def self.new_from_index_page(school)
 		self.new(
-			"http://insideschools.org#{school.css("a").attribute("href").text}",
 			school.css("div.result-info a.result-name").text.strip,
+			"https://insideschools.org#{school.css("a").attribute("href").text}",
 			school.css("div.result-grades").text.strip,
 			school.css("div.result-address").text.strip.gsub("\n\n", ", ")
 			)
 		# binding.pry
 	end
 
-	def initialize(url=nil, name=nil, grades=nil, location=nil)
-		@url = url
+	def initialize(name=nil, url=nil, grades=nil, location=nil)
 		@name = name
+		@url = url
 		@grades = grades
 		@location = location
 		@@all << self
@@ -27,6 +27,14 @@ class Schools::MiddleSchools
 
 	def self.find(id)
 		self.all[id-1]
+	end
+
+	def telephone
+		@telephone ||= doc.search("div.contact-point").text.strip
+	end
+
+	def principal
+		@principal ||= doc.search("div.contact-name").first.text.strip
 	end
 
 	def doc

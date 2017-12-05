@@ -39,12 +39,13 @@ class Schools::CLI
 
 	def print_school(school)
 		puts ""
-		puts "Name:  #{school.name}"
-		puts "Address:  #{school.location}"
-		puts "Telephone:"
-		puts "Grades:  #{school.grades}"
+		puts "Name:       #{school.name}"
+		puts "Address:    #{school.location}"
+		puts "Telephone:  #{school.telephone}"
+		puts "Grades:     #{school.grades}"
 		puts "Website:"
-		puts "Principal:"
+		puts "Principal:  #{school.principal}"
+		puts ""
 		puts "What's Special:"
 		puts "Downside:"
 	end
