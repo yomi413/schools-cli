@@ -7,8 +7,8 @@ class Schools::MiddleSchools
 		self.new(
 			school.css("div.result-info a.result-name").text.strip,
 			"https://insideschools.org#{school.css("a").attribute("href").text}",
-			school.css("div.result-grades").text.strip,
-			school.css("div.result-address").text.strip.gsub("\n\n", ", ")
+			school.css("div.result-grades").text.strip
+			# school.css("div.result-address").text.strip.gsub("\n\n", ", ")
 			)
 		# binding.pry
 	end
@@ -27,6 +27,10 @@ class Schools::MiddleSchools
 
 	def self.find(id)
 		self.all[id-1]
+	end
+
+	def location
+		@location ||= doc.search("div.location-address").first.text.strip.split("\n\n\n\n").join(", ").gsub("\n\n\n", ", ")
 	end
 
 	def telephone
