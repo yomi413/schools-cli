@@ -5,9 +5,11 @@ class Schools::MiddleSchools
 
 	def self.new_from_index_page(school)
 		self.new(
-			school.css("div.result-info a.result-name").text.strip
+			school.css("div.result-info a.result-name").text,
+			"http://insideschools.org#{school.css("a").attribute("href").text}",
+			school.css("div.result-grades").text.strip
 			)
-		binding.pry
+		# binding.pry
 	end
 
 	def initialize(name=nil, url=nil, grades=nil, location=nil)

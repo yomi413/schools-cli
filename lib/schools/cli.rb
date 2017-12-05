@@ -1,6 +1,7 @@
 class Schools::CLI
 
 	def call
+		Schools::Scraper.new.make_schools
 		start
 	end
 
@@ -38,10 +39,10 @@ class Schools::CLI
 
 	def print_school(school)
 		puts ""
-		puts "Name:  "
+		puts "Name:  #{school.name}"
 		puts "Address:"
 		puts "Telephone:"
-		puts "Grades:"
+		puts "Grades:  #{school.grades}"
 		puts "Website:"
 		puts "Principal:"
 		puts "What's Special:"
