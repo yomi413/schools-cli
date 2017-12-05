@@ -20,6 +20,10 @@ class Schools::CLI
 		puts "What school would you like more information about, by number?"
 		input = gets.strip
 
+		school = Schools::MiddleSchools.find(input.to_i)
+
+		print_school(school)
+
 		puts ""
 		puts "Would you like to see another school? (y/n)"
 
