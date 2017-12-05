@@ -3,6 +3,13 @@ class Schools::MiddleSchools
 
 	@@all = []
 
+	def self.new_from_index_page(school)
+		self.new(
+			school.css("div.result-info a.result-name").text.strip
+			)
+		binding.pry
+	end
+
 	def initialize(name=nil, url=nil, grades=nil, location=nil)
 		@name = name
 		@url = url
