@@ -27,6 +27,10 @@ class Schools::MiddleSchools
 		self.all[id-1]
 	end
 
+	def school_website
+		@school_website ||= doc.search("div.school-website a").attribute("href").value
+	end
+
 	def location
 		@location ||= doc.search("div.location-address").first.text.strip.split("\n\n\n\n").join(", ").gsub("\n\n\n", ", ")
 	end

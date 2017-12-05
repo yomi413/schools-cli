@@ -43,7 +43,7 @@ class Schools::CLI
 		puts "Address:    #{school.location}"
 		puts "Telephone:  #{school.telephone}"
 		puts "Grades:     #{school.grades}"
-		puts "Website:"
+		puts "Website:    #{school.school_website}"
 		puts "Principal:  #{school.principal}"
 		puts ""
 		puts "What's Special: #{school.whats_special}"
