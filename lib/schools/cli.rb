@@ -19,7 +19,17 @@ class Schools::CLI
 		puts ""
 		puts "What school would you like more information about, by number?"
 		input = gets.strip
+
 		puts ""
+		puts "Would you like to see another school? (y/n)"
+
+		input = gets.strip.downcase
+		if input == "y"
+			start
+		else
+			puts ""
+			puts "Goodbye! Please come again."
+		end
 	end
 
 end
