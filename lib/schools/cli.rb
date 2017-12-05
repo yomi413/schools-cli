@@ -46,8 +46,8 @@ class Schools::CLI
 		puts "Website:"
 		puts "Principal:  #{school.principal}"
 		puts ""
-		puts "What's Special:"
-		puts "Downside:"
+		puts "What's Special: #{school.whats_special}"
+		puts "Downside:       #{school.downside}"
 	end
 
 end

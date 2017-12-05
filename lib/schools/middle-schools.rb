@@ -8,9 +8,7 @@ class Schools::MiddleSchools
 			school.css("div.result-info a.result-name").text.strip,
 			"https://insideschools.org#{school.css("a").attribute("href").text}",
 			school.css("div.result-grades").text.strip
-			# school.css("div.result-address").text.strip.gsub("\n\n", ", ")
 			)
-		# binding.pry
 	end
 
 	def initialize(name=nil, url=nil, grades=nil, location=nil)
@@ -39,6 +37,14 @@ class Schools::MiddleSchools
 
 	def principal
 		@principal ||= doc.search("div.contact-name").first.text.strip
+	end
+
+	def whats_special
+		@whats_special ||= doc.search("div.review-takeaways").text.strip.split("\n\n")[1]
+	end
+
+	def downside
+		@downside ||= doc.search("div.review-takeaways").text.strip.split("\n\n")[3]
 	end
 
 	def doc
