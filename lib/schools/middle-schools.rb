@@ -3,7 +3,11 @@ class Schools::MiddleSchools
 
 	@@all = []
 
-	def initialize
+	def initialize(name=nil, url=nil, grades=nil, location=nil)
+		@name = name
+		@url = url
+		@grades = grades
+		@location = location
 		@@all << self
 	end
 
