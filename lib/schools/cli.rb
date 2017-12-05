@@ -40,7 +40,7 @@ class Schools::CLI
 	def print_school(school)
 		puts ""
 		puts "Name:  #{school.name}"
-		puts "Address:"
+		puts "Address:  #{school.location}"
 		puts "Telephone:"
 		puts "Grades:  #{school.grades}"
 		puts "Website:"

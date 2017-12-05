@@ -5,16 +5,17 @@ class Schools::MiddleSchools
 
 	def self.new_from_index_page(school)
 		self.new(
-			school.css("div.result-info a.result-name").text,
 			"http://insideschools.org#{school.css("a").attribute("href").text}",
-			school.css("div.result-grades").text.strip
+			school.css("div.result-info a.result-name").text.strip,
+			school.css("div.result-grades").text.strip,
+			school.css("div.result-address").text.strip.gsub("\n\n", ", ")
 			)
 		# binding.pry
 	end
 
-	def initialize(name=nil, url=nil, grades=nil, location=nil)
-		@name = name
+	def initialize(url=nil, name=nil, grades=nil, location=nil)
 		@url = url
+		@name = name
 		@grades = grades
 		@location = location
 		@@all << self
