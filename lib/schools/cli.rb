@@ -32,4 +32,16 @@ class Schools::CLI
 		end
 	end
 
+	def print_school(school)
+		puts ""
+		puts "Name:  "
+		puts "Address:"
+		puts "Telephone:"
+		puts "Grades:"
+		puts "Website:"
+		puts "Principal:"
+		puts "What's Special:"
+		puts "Downside:"
+	end
+
 end
