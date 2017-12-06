@@ -12,7 +12,7 @@ class Schools::Scraper
 		schools = []
 
 		get_pages.each do |page|
-			results = get_pages.css("div.result")
+			results = page.css("div.result")
 			results.each do |school|
 				schools << school
 			end
@@ -27,9 +27,13 @@ class Schools::Scraper
 	end
 
 	def schools_list
-		schools_list = self.get_page.css("div.result-info a.result-name").text.split("\n")
-		schools_list.each.with_index(1) do |school, i|
-			puts "#{i}.	#{school}"
+		index = 0
+		self.get_pages.each do |page|
+			schools_list = page.css("div.result-info a.result-name").text.split("\n")
+			schools_list.each.with_index(index+1) do |school, i|
+				index = i
+				puts "#{i}.	#{school}"
+			end
 		end
 	end
 
