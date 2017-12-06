@@ -2,9 +2,10 @@ require "pry"
 
 class Schools::Scraper
 
-	def get_page
-		Nokogiri::HTML(open("https://insideschools.org/search/results?borough=bronx&district=8&neighborhood=&grade_level=ms&button="))
-		
+	def get_pages
+		page_1 = Nokogiri::HTML(open("https://insideschools.org/search/results?borough=bronx&district=8&neighborhood=&grade_level=ms&button="))
+		page_2 = Nokogiri::HTML(open("https://insideschools.org/search/results/page/2?borough=bronx&button=&district=8&grade_level=ms&neighborhood="))
+		[page_1, page_2]
 	end
 
 	def scrape_for_schools
