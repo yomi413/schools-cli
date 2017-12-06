@@ -27,6 +27,14 @@ class Schools::MiddleSchools
 		self.all[id-1]
 	end
 
+	def location
+		@location ||= doc.search("div.location-address").first.text.strip.split("\n\n\n\n").join(", ").gsub("\n\n\n", ", ")
+	end
+
+	def telephone
+		@telephone ||= doc.search("div.contact-point").text.strip
+	end
+
 	def school_website
 		school_website = doc.search("div.school-website a")
 		if school_website.empty?
@@ -34,14 +42,6 @@ class Schools::MiddleSchools
 		else
 			school_website.attribute("href").value
 		end
-	end
-
-	def location
-		@location ||= doc.search("div.location-address").first.text.strip.split("\n\n\n\n").join(", ").gsub("\n\n\n", ", ")
-	end
-
-	def telephone
-		@telephone ||= doc.search("div.contact-point").text.strip
 	end
 
 	def principal
