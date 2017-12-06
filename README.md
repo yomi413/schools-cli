@@ -1,26 +1,16 @@
 # Schools::Cli
 
-This Ruby Gem provides a CLI that generates a list of middle schools located in District 8 in Bronx, NY per https://insideschools.org/, a not-for-profit organization that visits school throughout New York City.  
+This Ruby Gem provides a CLI that generates a list of middle schools located in District 8 in Bronx, NY per https://insideschools.org/, a not-for-profit organization that visits schools throughout New York City.  
 
 ## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'schools-cli'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
 
     $ gem install schools-cli
 
 ## Usage
 
-TODO: Write usage instructions here
+Type the below and follow the on screen prompts.
+
+   $ schools-cli
 
 ## Development
 
@@ -30,13 +20,9 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/<github username>/schools-cli. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/yomi413/schools-cli. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
-## Code of Conduct
-
-Everyone interacting in the Schools::Cli project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/<github username>/schools-cli/blob/master/CODE_OF_CONDUCT.md).
-# schools-cli
