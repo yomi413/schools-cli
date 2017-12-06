@@ -49,11 +49,21 @@ class Schools::MiddleSchools
 	end
 
 	def whats_special
-		@whats_special ||= doc.search("div.review-takeaways").text.strip.split("\n\n")[1]
+		whats_special = doc.search("div.review-takeaways").text.strip.split("\n\n")[1]
+		if whats_special == nil
+			"Information not provided"
+		else
+			whats_special
+		end
 	end
 
 	def downside
-		@downside ||= doc.search("div.review-takeaways").text.strip.split("\n\n")[3]
+		downside = doc.search("div.review-takeaways").text.strip.split("\n\n")[3]
+		if downside == nil
+			"Information not provided"
+		else
+			downside
+		end
 	end
 
 	def doc
