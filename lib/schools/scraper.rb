@@ -9,7 +9,15 @@ class Schools::Scraper
 	end
 
 	def scrape_for_schools
-		get_page.css("div.result")
+		schools = []
+
+		get_pages.each do |page|
+			results = get_pages.css("div.result")
+			results.each do |school|
+				schools << school
+			end
+		end
+		schools
 	end
 
 	def make_schools
