@@ -39,6 +39,8 @@ class Schools::CLI
 
 	def print_school(school)
 		puts ""
+		puts "**********************************************************************"
+		puts ""
 		puts "Name:       #{school.name}"
 		puts "Address:    #{school.location}"
 		puts "Telephone:  #{school.telephone}"
@@ -48,6 +50,9 @@ class Schools::CLI
 		puts ""
 		puts "What's Special: #{school.whats_special}"
 		puts "Downside:       #{school.downside}"
+		puts ""
+		puts "**********************************************************************"
+		puts ""
 	end
 
 end
