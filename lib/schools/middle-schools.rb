@@ -28,7 +28,12 @@ class Schools::MiddleSchools
 	end
 
 	def school_website
-		@school_website ||= doc.search("div.school-website a").attribute("href").value
+		school_website = doc.search("div.school-website a")
+		if school_website.empty?
+			"Not available"
+		else
+			school_website.attribute("href").value
+		end
 	end
 
 	def location
