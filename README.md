@@ -1,8 +1,6 @@
 # Schools::Cli
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/schools/cli`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This Ruby Gem provides a CLI that generates a list of middle schools located in District 8 in Bronx, NY per https://insideschools.org/, a not-for-profit organization that visits school throughout New York City.  
 
 ## Installation
 
