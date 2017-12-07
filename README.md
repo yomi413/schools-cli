@@ -1,6 +1,6 @@
 # Schools::Cli
 
-This Ruby Gem provides a CLI that generates a list of middle schools located in District 8 in Bronx, NY per https://insideschools.org/, a not-for-profit organization that visits schools throughout New York City.  
+This Ruby Gem provides a CLI that generates a list of middle schools located in District 8 in Bronx, NY per https://insideschools.org/, a not-for-profit organization that visits schools throughout New York City and gathers information that parents, teachers and students could find useful.  
 
 ## Installation
 
