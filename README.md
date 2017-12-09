@@ -1,6 +1,6 @@
 # Schools::Cli
 
-This Schools::CLI program provides a CLI that generates a list of middle schools location in Distric 8 in Bronx, NY.  I used https://insideschools.org/ to gather information that prospective 6th graders and their families could find useful.  While this program was designed as a Gem, it is not published. Do not attempt to install.  To view and run this program follow the following instructions:
+This Schools::CLI program provides a CLI that generates a list of middle schools located in District 8 in Bronx, NY.  I used https://insideschools.org/ to gather information that prospective 6th graders and their families could find useful.  While this program was designed as a Ruby Gem, it is not published. Do not attempt to install.  To view and run this program follow the following instructions:
 
 1. Visit the github repository at https://github.com/yomi413/schools-cli.
 
