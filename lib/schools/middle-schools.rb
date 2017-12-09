@@ -1,5 +1,5 @@
 class Schools::MiddleSchools
-	attr_accessor :name, :url, :grades, :location, :telephone, :princial, :whats_special, :downside
+	attr_accessor :name, :url, :grades 
 
 	@@all = []
 
@@ -11,11 +11,10 @@ class Schools::MiddleSchools
 			)
 	end
 
-	def initialize(name=nil, url=nil, grades=nil, location=nil)
+	def initialize(name=nil, url=nil, grades=nil)
 		@name = name
 		@url = url
 		@grades = grades
-		@location = location
 		@@all << self
 	end
 
